@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Cyber Zoid Solutions - IT & Cybersecurity Services</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Banner Section with Background Video -->
+    <section class="banner">
+        <header>
+            <a href="#about" class="logo"><span>Cyber Zoid </span>Solutions</a>
+	    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul>
+                <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
+                <li><a href="#about" class="menu-btn"><strong>About</strong></a></li>
+                <li><a href="#services" class="menu-btn"><strong>Services</strong></a></li>
+                <li><a href="projects/projects.html" class="menu-btn"><strong>Projects</strong></a></li>
+                <li><a href="#contact" class="menu-btn"><strong>Contact</strong></a></li>
+            </ul>
+        </header>
+
+        <!-- Background Video -->
+        <video autoplay muted loop id="background-video">
+            <source src="bgVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="content">
+            <h3>Welcome to Cyber Zoid Solutions </h3>
+            <h2>Your Trusted Partner in <span id="text"></span></h2>
+            <p>We provide expert cybersecurity services, IT consulting, College Projects, and custom development.</p>
+            <button onclick="window.location.href='#services';">Explore Services</button>
+            <button class="chat" onclick="window.location.href='https:/wa.me/6382427369';"> 
+            <ion-icon name="chatbubbles-outline"></ion-icon> Let's Chat</button>
+        </div>
+        
+    </section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <!-- Background Video -->
+   
+    </div>
+    <div class="max-width">
+        <div class="about-content">
+            <!-- Left Column: Image -->
+            <div class="column_left">
+                <img src="1.png" alt="Profile Image 626x626">
+            </div>
+            <!-- Right Column: Header and Text -->
+            <div class="column_right">
+                <h2>We are Cyber Zoid Solutions, your experts in</h2>
+                <p>Our team specializes in providing top-notch IT consulting, cybersecurity solutions, College Projects, and custom development. We help businesses strengthen their infrastructure and protect sensitive data.</p>
+                <a href="Broucher.pdf" target="blank">Download Company Brochure</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <!-- Background Video Container -->
+        <div class="video-container">
+            <video autoplay muted loop id="background-video1">
+                <source src="bk.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Services Content -->
+        <div class="max-width">
+            <h2 class="title">Our Services</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="text">IT consulting</div>
+                        <p>Technology strategy, architecture, and solutions tailored to your business needs.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-user-secret"></i>
+                        <div class="text">Cybersecurity</div>
+                        <p>Comprehensive cybersecurity services including penetration testing, incident response, and malware analysis.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-cloud"></i>
+                        <div class="text">College Projects</div>
+                        <p>Projects on all kinds of domains such as cloud computing, Machine Learning, Cybersecurity, Networking, etc.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">Web & App Development</div>
+                        <p>Custom-built websites and applications designed to scale with your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact"> 
+        <div class="max-width">
+            <h2 class="title">Contact Cyber Zoid Solutions</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>Reach out to discuss your cybersecurity needs, IT strategy, or custom development projects.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fa-solid fa-user-large"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title"><a href="#" style="text-decoration: none; color: #ffffff;">Cyber Zoid Solutions</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Chennai, India</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title"><a href="mailto:ethicalcybersecops@gmail.com" style="text-decoration: none; color: #ffffff;">info@cybersecops.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column right">
+                    <div class="text">Message Us</div>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Message..." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector("form").addEventListener("submit", function (event) {
+              event.preventDefault();
+          
+              // Collect form data
+              const name = document.querySelector(".field.name input").value;
+              const email = document.querySelector(".field.email input").value;
+              const subject = document.querySelector(".field input").value;
+              const message = document.querySelector(".textarea textarea").value;
+          
+              // Construct the URL with parameters
+              const scriptURL = `https://script.google.com/macros/s/AKfycbwCR01psH3Twj50K7ZyGOEGQzXQtORq6iOhA7H4qxoLM50TEcSlOn1kDRyQ4VYhGKY_/exec?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`;
+          
+              // Send data using GET request
+              fetch(scriptURL)
+                .then(response => response.json())
+                .then(data => {
+                  alert("Message sent successfully!");
+                  console.log("Success:", data);
+                })
+                .catch(error => {
+                  alert("Failed to send message.");
+                  console.error("Error:", error);
+                });
+            });
+          </script>
+    </section>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+<script>function toggleMenu() {
+    document.querySelector("header ul").classList.toggle("active");
+}
+</script>
+
+
+</body>
+</html>
