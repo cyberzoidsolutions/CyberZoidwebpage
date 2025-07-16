@@ -11,7 +11,7 @@
     <section class="banner">
         <header>
             <a href="#about" class="logo"><span>Cyber Zoid </span>Solutions</a>
-	    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
                 <li><a href="#about" class="menu-btn"><strong>About</strong></a></li>
@@ -148,7 +148,7 @@
                                 <input type="email" placeholder="Your Email" required>
                             </div>
                         </div>
-                        <div class="field">
+                        <div class="field subjects">
                             <input type="text" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
@@ -161,32 +161,47 @@
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            document.querySelector("form").addEventListener("submit", function (event) {
-              event.preventDefault();
-          
-              // Collect form data
-              const name = document.querySelector(".field.name input").value;
-              const email = document.querySelector(".field.email input").value;
-              const subject = document.querySelector(".field input").value;
-              const message = document.querySelector(".textarea textarea").value;
-          
-              // Construct the URL with parameters
-              const scriptURL = `https://script.google.com/macros/s/AKfycbwXtq5IYpZrlgbJxIm_0_ZIdz9f4aloTXZ_v0vnqtOImHHpQScq30z6mF_pXdMPUd6jTw/exec`;
-          
-              // Send data using GET request
-              fetch(scriptURL)
+          document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.querySelector(".field.name input").value;
+                const email = document.querySelector(".field.email input").value;
+                const subject = document.querySelector(".field.subjects input").value;
+                const message = document.querySelector(".field.textarea textarea").value;
+
+                
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('subject', subject);
+                formData.append('message', message);                 
+
+                const scriptURL = `https://script.google.com/macros/s/AKfycbwXtq5IYpZrlgbJxIm_0_ZIdz9f4aloTXZ_v0vnqtOImHHpQScq30z6mF_pXdMPUd6jTw/exec`;
+
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData
+                })
                 .then(response => response.json())
                 .then(data => {
-                  alert("Message sent successfully!");
-                  console.log("Success:", data);
+                    alert("Message sent successfully!");
+                    console.log("Success:", data);
+                    form.reset();
                 })
                 .catch(error => {
-                  alert("Failed to send message.");
-                  console.error("Error:", error);
+                    alert("Failed to send message.");
+                    console.error("Error:", error);
                 });
             });
-          </script>
+         });
+        </script>
+
     </section>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
